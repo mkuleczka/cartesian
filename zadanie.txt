@@ -1,0 +1,21 @@
+data1 = [{'name': '#hours',
+          'words': [f'{str(hour)}:{minute}' for hour in range(24) for minute in ['00', '15', '30', '45']]},
+         {'name': '#before', 'words': ['before #hours']}]
+
+data2 = [{'name': '#not',
+          'words': ['not']},
+         {'name': '#interested', 'words': ['interested']},
+         {'name': '#not_interested', 'words': ['#not #interested', 'i\'am #not_interested']}]
+
+"""
+Zadanie polega na stworzeniu funkcji, która umożliwia stworzenie iloczynu kartezjańskiego z zagnieżdżonych list,
+na podstawie przygotowanych danych składających się z listy słowników w których pierwsza z wartości jest nazwą, a druga listą słów.
+
+Dane testowe są pełne i w tych przykładach nie jest wymagana walidacja danych (czy taka lista istnieje).
+Uwzględnić możliwość zagnieżdżenia tej samej listy (data2).
+Trzeba pamiętać, by czas pełnego wykonania był jak najkrótszy (od import do return).
+
+Przykład:
+IN: [{'name': '#x', 'words': ['x', 'xx']}, {'name': '#y', 'words': ['y', 'yy', '#x #y']}]
+OUT: [{'name': '#x', 'words': ['x', 'xx']}, {'name': '#y', 'words': ['y', 'yy', 'x y', 'x yy', 'xx y', 'xx yy']}]
+"""
